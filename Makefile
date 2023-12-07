@@ -55,7 +55,7 @@ endef
 
 .PHONY: all clean base merge directories
 
-all: base merge closure
+all: base merge
 
 base: | directories $(VERSIONDIR)/catalog-v001.xml build/robot.jar $(OWL_COPY) $(TTL_COPY) $(TTL_TRANSLATE)
 

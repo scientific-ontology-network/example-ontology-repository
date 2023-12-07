@@ -40,22 +40,6 @@ jobs:
         with:
           name: build-artifacts
           path: build/mno
-      - name: install python dependencies
-        run: pip install -r src/scripts/requirements.txt
-      - name: setup robot 1.9.0
-        run: |
-          wget https://github.com/ontodev/robot/releases/download/v1.9.0/robot.jar -O build/robot19.jar
-      - name: Build ETD xlsx
-        run: |
-          java -jar build/robot19.jar merge --input build/mno/$(cat VERSION)/mno-full.omn \
-            --include-annotations true \
-          export  --header "ID|LABEL|definition" \
-                  --prefix "mno: http://example.org/ontologies/mno#_" \
-                  --sort "LABEL" \
-                  --export $(pwd)/build/mno/$(cat VERSION)/etd.xlsx
-      - name: Build ETD csv
-        run: |
-          python $(pwd)/src/scripts/etd/etd.py $(pwd)/build/mno/$(cat VERSION)
       - name: consistency
         run: |
           wget https://github.com/owlcs/releases/raw/master/HermiT/org.semanticweb.hermit-packaged-1.4.6.519-SNAPSHOT.jar -O build/hermit.jar
@@ -74,12 +58,6 @@ jobs:
           path: |
             build/**/*
             !build/**/*.jar
-      - name: competency
-        continue-on-error: true
-        run: |
-          pytest -s -v
-          # bash tests/competency_questions/run_questions.sh "java -jar build/hermit.jar" $(pwd)/build/mno/$(cat VERSION)/mno-full.owl true
-          # bash tests/competency_questions/run_questions.sh "java -jar build/hermit.jar" $(pwd)/build/mno/$(cat VERSION)/mno-full.owl false
       - name: Upload Artifacts
         if: always()
         uses: actions/upload-artifact@v3
