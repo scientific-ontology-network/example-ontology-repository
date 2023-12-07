@@ -1,0 +1,15 @@
+@base <http://example.org/ontologies/mno> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<http://example.org/ontologies/mno> rdf:type owl:Ontology ;
+                           owl:versionIRI <http://example.org/ontologies/mno/0.0.0> ;
+                           dct:license <http://creativecommons.org/publicdomain/zero/1.0/>;
+                           dct:title "My new ontology";
+
+                           owl:imports <http://purl.obolibrary.org/obo/bfo.owl#> ;
+                           owl:imports <http://purl.obolibrary.org/obo/ro.owl#> ;
+
+                           dc:contributor "(0001) Jane Mary Doe (@johndoe)".
