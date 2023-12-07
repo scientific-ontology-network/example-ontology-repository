@@ -2,11 +2,11 @@
 
 Developing a common ontology for the domain of this domain.
 
-*This repository was created using the (ontology cookiecutter)[https://github.com/open-ontology-community/cookiecutter-ontology]*
+*This repository was created using the [ontology cookie-cutter](https://github.com/open-ontology-community/cookiecutter-ontology)*
 
 ## Scope
 
-*Define your ontology's scope here*
+This is an empty example ontology. There is no scope to describe here. But this must not be true for your ontology. A scope definition is important and should be followed when adding new classes. 
 
 ## Contributing
 
