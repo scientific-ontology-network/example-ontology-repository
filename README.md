@@ -10,12 +10,12 @@ This is an empty example ontology. There is no scope to describe here. But this 
 
 ## Contributing
 
-If you want to learn how you can contribute to MNO's development, please refer to (our contribution manual)[CONTRIBUTING.md].
+If you want to learn how you can contribute to MNO's development, please refer to [our contribution manual](./CONTRIBUTING.md).
 
 ## License / Copyright / Citation
 
 This repository is licensed under `CC0 1.0 Universal (CC0 1.0) Public Domain Dedication`.
-For a scientific citation please see the [CITATION.cff](CITATION.cff).
+For a scientific citation please see the [CITATION.cff](./CITATION.cff).
 
 To cite a specific class of the ontology and its definition please use the following convention:
 > 'class label' (FUll-URI) from the [My new ontology (mno)](http://example.org/ontologies/mno)
